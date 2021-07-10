@@ -73,11 +73,19 @@ func (p *Plugin) startMeetingFromRoomURL(details meetingDetails) (*meetingPosts,
 }
 
 func (p *Plugin) makeJoinURL(meetingURL string) string {
-	return strings.Replace(meetingURL, "webex.com/meet/", "webex.com/join/", 1)
+	if p.getConfiguration().URLConversion {
+		meetingURL = strings.Replace(meetingURL, "webex.com/meet/", "webex.com/join/", 1)
+	}
+
+	return meetingURL
 }
 
 func (p *Plugin) makeStartURL(meetingURL string) string {
-	return strings.Replace(meetingURL, "webex.com/meet/", "webex.com/start/", 1)
+	if p.getConfiguration().URLConversion {
+		meetingURL = strings.Replace(meetingURL, "webex.com/meet/", "webex.com/start/", 1)
+	}
+
+	return meetingURL
 }
 
 func (p *Plugin) getURLFromRoomID(roomID string) (string, error) {

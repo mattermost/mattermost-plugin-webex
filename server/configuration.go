@@ -28,6 +28,8 @@ import (
 type configuration struct {
 	SiteHost string `json:"sitehost"`
 
+	URLConversion bool `json:"url_conversion"`
+
 	// siteName is the SiteHost up to .webex.com
 	// Eg., for testsite.my.webex.com, siteName would be: testsite.my
 	siteName string

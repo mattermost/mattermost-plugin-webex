@@ -33,6 +33,8 @@ Go to Settings --> Scroll down to the Plugins section, and click on Webex Plugin
 
 Insert the Webex Meetings URL for your organization. It is often in the format of `<companyname>.my.webex.com` or `<companyname>.webex.com`.
 
+Depending on your situation, you will want to disable the URL conversion (known unsupported on some case with Linux clients).
+
 ## Usage
 Easily start and join Webex meetings directly from Mattermost
 

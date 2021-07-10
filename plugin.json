@@ -30,6 +30,13 @@
                 "help_text": "The hostname for your team's Webex site. For example: teamsite.webex.com.",
                 "placeholder": "teamsite.webex.com",
                 "default": null
+            },
+            {
+                "key": "UrlConversion",
+                "display_name": "Convert Webex URLs:",
+                "type": "bool",
+                "help_text": "Enable or disable the conversion of URL: replace /meet/ by /join/ or /start/.",
+                "default": true
             }
         ]
     }
